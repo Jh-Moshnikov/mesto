@@ -1,0 +1,11 @@
+.header {
+    width: 100%;
+    margin-top: 45px;
+    display: flex;
+    border-bottom: 1px solid rgba(84, 84, 84, .7);
+}
+@media (max-width: 600px) {
+    .header {
+      margin-top: 25px;  
+    }
+  } 
