@@ -8,6 +8,18 @@
     <title>Mesto</title>
 </head>
 <body class="body">
+    <div class="popup">
+        <form class="popup_container">
+            <button class="popup_close"></button>
+            <h2 class="popup_title">Редактировать профиль</h2>
+            <fieldset class="popup_edit-form">
+                <input type="text" placeholder="Жак-Ив Кусто" class="popup_edit-profile-name">
+                <input type="text" placeholder="Исследователь океана" class="popup_edit-profile-occupation">
+            </fieldset>
+            <input type="submit" value="Сохранить" class="popup_submit-profile-info"></input>
+        </form>
+        
+    </div>
     <div class="page">
         <header class="header">
             <img src="images/header_logo.png" alt="место" class="header_logo">
@@ -51,9 +63,9 @@
                     </div>
                 </div>
                 <div class="element">
-                    <img src="images/Solovetsky Islands.png" alt="фотография места" class="element_image">
+                    <img src="images/Solovetsky_Islands.png" alt="фотография места" class="element_image">
                     <div class="element_info">
-                        <p class="element_title">Карачаево-Черкеск</p>
+                        <p class="element_title">Соловецкие Острова</p>
                         <button class="element_like-button"></button>
                     </div>
                 </div>
@@ -65,8 +77,10 @@
                     </div>
                 </div>
             </section> 
+           
         </main>
         <footer class="footer">© 2020 Mesto Russia</footer>
     </div> 
+    <script src="vendor/script.js"></script>
 </body>
 </html>
