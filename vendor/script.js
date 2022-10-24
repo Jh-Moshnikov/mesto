@@ -1,21 +1,21 @@
-const editButton = document.querySelector(".profile_edit-button");
-const popupCloseButton = document.querySelector(".popup_close");
+const editButton = document.querySelector(".profile__edit-button");
+const popupCloseButton = document.querySelector(".popup__close");
 const popup = document.querySelector(".popup");
-let profileName = document.querySelector(".profile_name");
-let profileOccupation = document.querySelector(".profile_occupation");
+let profileName = document.querySelector(".profile__name");
+let profileOccupation = document.querySelector(".profile__occupation");
 // Находим форму в DOM
-let formElement = document.querySelector('.popup_container'); 
+let formElement = document.querySelector('.popup__container'); 
 // Находим поля формы в DOM
-let nameInput = document.querySelector('.popup_edit-profile-name');
-let jobInput = document.querySelector('.popup_edit-profile-occupation');
+let nameInput = document.querySelector('.popup__edit-profile-name');
+let jobInput = document.querySelector('.popup__edit-profile-occupation');
 
 function popupOpened() {
-    popup.classList.add("popup_opened");
+    popup.classList.add("popup__opened");
     nameInput.value = profileName.textContent;
     jobInput.value = profileOccupation.textContent; 
 }
 function popupClose() {
-    popup.classList.remove("popup_opened");
+    popup.classList.remove("popup__opened");
 } 
 
 popup.addEventListener('click', function(event) { /*добавил закрытие попапа кликом за его пределами */
