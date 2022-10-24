@@ -13,12 +13,11 @@
             <button class="popup_close"></button>
             <h2 class="popup_title">Редактировать профиль</h2>
             <fieldset class="popup_edit-form">
-                <input type="text" placeholder="Жак-Ив Кусто" class="popup_edit-profile-name">
-                <input type="text" placeholder="Исследователь океана" class="popup_edit-profile-occupation">
+                <input type="text" class="popup_edit-profile-name">
+                <input type="text" class="popup_edit-profile-occupation">
             </fieldset>
             <input type="submit" value="Сохранить" class="popup_submit-profile-info"></input>
-        </form>
-        
+        </form>  
     </div>
     <div class="page">
         <header class="header">
@@ -28,8 +27,11 @@
             <section class="profile">
                 <img src="images/avatar.png" alt="" class="profile_avatar">
                 <div class="profile_info">
-                    <h1 class="profile_name">Жак-Ив Кусто<button class="profile_edit-button"></button></h1>
+                    <h1 class="profile_name">Жак-Ив Кусто</h1>
+                    <button class="profile_edit-button"></button>
                     <p class="profile_occupation">Исследователь океана</p>
+                    
+                    
                 </div>
                 <button class="profile_add-button"></button>
             </section> 
@@ -81,6 +83,6 @@
         </main>
         <footer class="footer">© 2020 Mesto Russia</footer>
     </div> 
-    <script src="vendor/scripts/popup_opened.js"></script>
+    <script src="vendor/script.js"></script>
 </body>
 </html>

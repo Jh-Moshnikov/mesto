@@ -5,11 +5,17 @@
     line-height: 48px;
     margin: 0;
 }
+@media (max-width: 900px) {
+    .profile_name {
+      align-self: center;
+      justify-self: center;
+      text-align: center;
+    }
+  } 
 @media (max-width: 600px) {
     .profile_name {
         font-size: 27px;
         line-height: 33px;
-        text-align: left;
-        margin-left: 69px;
+       /* margin-left: 69px;*/
     }
   } 
