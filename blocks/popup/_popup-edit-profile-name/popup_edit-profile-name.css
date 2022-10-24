@@ -12,7 +12,7 @@
   line-height: 17px;
   color: #000000;
 }
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .popup_edit-profile-name {
     width: 238px;
     height: 27px;
