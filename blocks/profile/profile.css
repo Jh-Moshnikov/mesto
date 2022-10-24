@@ -1,7 +1,6 @@
 .profile {
     margin-top: 40px;
     display: flex;
-  /*  border: 1px solid green; */
 }
 @media (max-width: 900px) {
   .profile {

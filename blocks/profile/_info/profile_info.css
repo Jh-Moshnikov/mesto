@@ -1,19 +1,9 @@
 .profile_info {
-   /* max-width: 336px;*/ /* изменил с мин*/
     margin: 22px 0 25px 30px;
     display: grid;
     grid-template-columns: 294px auto;
-   /* gap: 10px 18px;*/
     justify-items: flex-start;
     align-items: center;
-  /* grid-template-areas:
-      "profile_name profile_edit-button"
-      "profile_occupation profile_occupation";*/
-   /* border: 1px solid red; */
-    /*display: flex;*/
-    /* flex-direction: column; */
-   /* align-content: flex-start;
-    flex-wrap: wrap;*/
 }
 @media (max-width: 900px) {
     .profile_info {

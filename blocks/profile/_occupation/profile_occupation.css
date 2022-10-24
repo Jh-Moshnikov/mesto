@@ -4,13 +4,11 @@
     font-size: 18px;
     line-height: 22px;
     margin: 5px 0 0;
-   /* min-width: 336px;*/
-   /* grid-area: "profile_occupation";*/
 }
 @media (max-width: 900px) {
     .profile_occupation {
       align-self: center;
-  justify-self: center;
+      justify-self: center;
       font-size: 14px;
       line-height: 17px;
     }
@@ -18,7 +16,5 @@
   @media (max-width: 600px) {
     .profile_occupation {
       text-align: center;
-     
-      
     }
   } 
