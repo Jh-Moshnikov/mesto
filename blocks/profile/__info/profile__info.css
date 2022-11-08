@@ -1,7 +1,7 @@
 .profile__info {
     margin: 22px 0 25px 30px;
     display: grid;
-    grid-template-columns: 294px auto;
+    grid-template-columns: 1fr auto;
     justify-items: flex-start;
     align-items: center;
 }
@@ -14,7 +14,9 @@
     .profile__info {
       margin-bottom: 36px;
       margin-top: 25px;
-      grid-template-columns: 189px 18px;
+      margin-left: 20px;
+      grid-template-columns: 1fr auto;
+      
     }
   } 
   

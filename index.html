@@ -8,81 +8,81 @@
     <title>Mesto</title>
 </head>
 <body class="body">
-    <div class="popup">
-        <form class="popup__container">
-            <button class="popup__close"></button>
-            <h2 class="popup__title">Редактировать профиль</h2>
-            <fieldset class="popup__edit-form">
-                <input type="text" class="popup__edit-profile-name">
-                <input type="text" class="popup__edit-profile-occupation">
-            </fieldset>
-            <input type="submit" value="Сохранить" class="popup__submit-profile-info">
-        </form>  
-    </div>
     <div class="page">
         <header class="header">
-            <img src="images/header_logo.png" alt="место" class="header__logo">
+            <img src="images/hrader_logo.svg" alt="место" class="header__logo">
         </header> 
         <main class="content">
             <section class="profile">
-                <img src="images/avatar.png" alt="" class="profile__avatar">
+                <img src="images/avatar.png" alt="фотография профиля" class="profile__avatar">
                 <div class="profile__info">
                     <h1 class="profile__name">Жак-Ив Кусто</h1>
-                    <button class="profile__edit-button"></button>
-                    <p class="profile__occupation">Исследователь океана</p>
-                    
-                    
+                    <button type="button" class="profile__edit-button"></button>
+                    <p class="profile__occupation">Исследователь океана</p>                 
                 </div>
-                <button class="profile__add-button"></button>
+                <button type="button" class="profile__add-button"></button>
             </section> 
             <section class="elements">
                 <div class="element">
                     <img src="images/Altai.png" alt="фотография места" class="element__image">
                     <div class="element__info">
-                        <p class="element__title">Алтай</p>
-                        <button class="element__like-button"></button>
+                        <h2 class="element__title">Алтай</h2>
+                        <button type="button" class="element__like-button"></button>
                     </div>
                 </div>
                 <div class="element">
                     <img src="images/Arkhangelsk.png" alt="фотография места" class="element__image">
                     <div class="element__info">
-                        <p class="element__title">Архангельск</p>
-                        <button class="element__like-button"></button>
+                        <h2 class="element__title">Архангельск</h2>
+                        <button type="button" class="element__like-button"></button>
                     </div>
                 </div>
                 <div class="element">
                     <img src="images/Canada.png" alt="фотография места" class="element__image">
                     <div class="element__info">
-                        <p class="element__title">Канада</p>
-                        <button class="element__like-button"></button>
+                        <h2 class="element__title">Канада</h2>
+                        <button type="button" class="element__like-button"></button>
                     </div>
                 </div>
                 <div class="element">
                     <img src="images/Italy.png" alt="фотография места" class="element__image">
                     <div class="element__info">
-                        <p class="element__title">Италия</p>
-                        <button class="element__like-button"></button>
+                        <h2 class="element__title">Италия</h2>
+                        <button type="button" class="element__like-button"></button>
                     </div>
                 </div>
                 <div class="element">
                     <img src="images/Solovetsky_Islands.png" alt="фотография места" class="element__image">
                     <div class="element__info">
-                        <p class="element__title">Соловецкие Острова</p>
-                        <button class="element__like-button"></button>
+                        <h2 class="element__title">Соловецкие Острова</h2>
+                        <button type="button" class="element__like-button"></button>
                     </div>
                 </div>
                 <div class="element">
                     <img src="images/Norway.png" alt="фотография места" class="element__image">
                     <div class="element__info">
-                        <p class="element__title">Норвегия</p>
-                        <button class="element__like-button"></button>
+                        <h2 class="element__title">Норвегия</h2>
+                        <button type="button" class="element__like-button"></button>
                     </div>
                 </div>
             </section> 
            
         </main>
-        <footer class="footer">© 2020 Mesto Russia</footer>
+        <footer class="footer"><p class="footer__information">© 2020 Mesto Russia</p></footer>
+        <div class="popup">
+            <div class="popup__container">
+                <button type="button" class="popup__close"></button>
+                <h2 class="popup__title">Редактировать профиль</h2>
+                <form method="post" name="profileForm" class="popup__form">
+                  <fieldset class="popup__edit-form">
+                    <input type="text" name="profile-name" placeholder="Имя" class="popup__edit popup__edit-profile-name">
+                    <input type="text" name="profile-occupation" placeholder="О себе" class="popup__edit popup__edit-profile-occupation">
+                  </fieldset>
+                  <input type="submit" value="Сохранить" class="popup__submit-profile-info">
+                </form>
+            </div>  
+        </div>
     </div> 
-    <script src="vendor/script.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
