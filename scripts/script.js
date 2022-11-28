@@ -1,3 +1,30 @@
+const initialElements = [
+    {
+      title: 'Алтай',
+      link: 'images/Altai.png'
+    },
+    {
+      title: 'Архангельск',
+      link: 'images/Arkhangelsk.png'
+    },
+    {
+      title: 'Канада',
+      link: 'images/Canada.png'
+    },
+    {
+      title: 'Домбай',
+      link: 'images/dombai.png'
+    },
+    {
+      title: 'Италия',
+      link: 'images/Italy.png'
+    },
+    {
+      title: 'Норвегия',
+      link: 'images/Norway.png'
+    }
+  ];
+
 const editButton = document.querySelector(".profile__edit-button");
 const popupCloseButton = document.querySelector(".popup__close");
 const popup = document.querySelector(".popup");
@@ -7,7 +34,9 @@ const profileOccupation = document.querySelector(".profile__occupation");
 const formElement = document.querySelector('.popup__form'); 
 // Находим поля формы в DOM
 const nameInput = document.querySelector('.popup__edit_change_name');
-const jobInput = document.querySelector('.popup__edit_change_occupation');
+const jobInput = document.querySelector('.popup__edit_change_occupation'); 
+const elements = document.querySelector('.elements');
+
 
 function popupOpened() {
     popup.classList.add("popup_opened");
@@ -36,3 +65,26 @@ popupCloseButton.addEventListener('click', popupClose);
 // Прикрепляем обработчик к форме:
 // он будет следить за событием “submit” - «отправка»
 formElement.addEventListener('submit', formSubmitHandler); 
+
+// шаблон карточки
+const elementTemplate = document.querySelector('#element-template').content.querySelector('.element');
+
+// генерация карточек
+const generateElement = (dataElement) => {
+    const newElement = elementTemplate.cloneNode(true);
+    const title = newElement.querySelector('.element__title');
+    const image = newElement.querySelector('.element__image');
+    title.textContent = dataElement.title;
+    image.src = dataElement.link;
+    return newElement
+    };
+
+  // добавление карточки  
+    const renderElement =(dataElement) => {
+        elements.prepend(generateElement(dataElement));
+    };
+    
+    // перебираем массив 
+    initialElements.forEach((dataElement) => {
+    renderElement(dataElement);
+    });

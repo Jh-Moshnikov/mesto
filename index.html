@@ -23,50 +23,7 @@
                 <button type="button" class="profile__add-button"></button>
             </section> 
             <section class="elements">
-                <div class="element">
-                    <img src="images/Altai.png" alt="фотография места" class="element__image">
-                    <div class="element__info">
-                        <h2 class="element__title">Алтай</h2>
-                        <button type="button" class="element__like-button"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img src="images/Arkhangelsk.png" alt="фотография места" class="element__image">
-                    <div class="element__info">
-                        <h2 class="element__title">Архангельск</h2>
-                        <button type="button" class="element__like-button"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img src="images/Canada.png" alt="фотография места" class="element__image">
-                    <div class="element__info">
-                        <h2 class="element__title">Канада</h2>
-                        <button type="button" class="element__like-button"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img src="images/Italy.png" alt="фотография места" class="element__image">
-                    <div class="element__info">
-                        <h2 class="element__title">Италия</h2>
-                        <button type="button" class="element__like-button"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img src="images/Solovetsky_Islands.png" alt="фотография места" class="element__image">
-                    <div class="element__info">
-                        <h2 class="element__title">Соловецкие Острова</h2>
-                        <button type="button" class="element__like-button"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img src="images/Norway.png" alt="фотография места" class="element__image">
-                    <div class="element__info">
-                        <h2 class="element__title">Норвегия</h2>
-                        <button type="button" class="element__like-button"></button>
-                    </div>
-                </div>
             </section> 
-           
         </main>
         <footer class="footer"><p class="footer__information">© 2020 Mesto Russia</p></footer>
         <div class="popup">
@@ -83,6 +40,15 @@
             </div>  
         </div>
     </div> 
-    <script src="scripts/script.js"></script>
+    <script src="scripts/script.js" defer></script>
+    <template id="element-template">
+        <div class="element"> 
+            <img src="" alt="фотография места" class="element__image">
+            <div class="element__info">
+                <h2 class="element__title"></h2>
+                <button type="button" class="element__like-button"></button>
+            </div>
+        </div>
+    </template>
 </body>
 </html>
