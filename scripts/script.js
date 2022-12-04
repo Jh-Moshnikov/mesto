@@ -76,6 +76,7 @@ const generateElement = (dataElement) => {
     const image = newElement.querySelector('.element__image');
     title.textContent = dataElement.title;
     image.src = dataElement.link;
+    image.alt = dataElement.title;
     return newElement
     };
 
