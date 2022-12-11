@@ -3,6 +3,7 @@
     height: 19px;
     border: none;
     padding: 0;
+    margin: 0;
     align-self: center;
     background-color: white;
     background-image: url(../../../images/like.png);
@@ -10,7 +11,4 @@
 .element__like-button:hover {
     opacity: 0.5;
     cursor: pointer;
-}
-.element__like-button:focus {
-    background-image: url(../../../images/like_active.png);
 }

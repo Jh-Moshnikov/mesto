@@ -22,13 +22,13 @@
                 </div>
                 <button type="button" class="profile__add-button"></button>
             </section> 
-            <section class="elements">
-            </section> 
+            <ul class="elements">
+            </ul> 
         </main>
         <footer class="footer"><p class="footer__information">© 2020 Mesto Russia</p></footer>
-        <div class="popup">
+        <div class="popup popup_profile">
             <div class="popup__container">
-                <button type="button" class="popup__close"></button>
+                <button type="button" class="popup__close popup__close_edit-profile"></button>
                 <h2 class="popup__title">Редактировать профиль</h2>
                 <form method="post" name="profileForm" class="popup__form">
                   <fieldset class="popup__edit-form">
@@ -39,16 +39,37 @@
                 </form>
             </div>  
         </div>
+        <div class="popup popup_submitCard">
+            <div class="popup__container">
+                <button type="button" class="popup__close popup__close_submitCard"></button>
+                <h2 class="popup__title">Новое место</h2>
+                <form method="post" name="profileForm" class="popup__form popup__form_submitCard">
+                  <fieldset class="popup__edit-form">
+                    <input type="text" name="submit-cardName" placeholder="Название" class="popup__edit popup__edit_submit-cardName">
+                    <input type="text" name="submit-cardLink" placeholder="Ссылка на катинку" class="popup__edit popup__edit_submit-cardLink">
+                  </fieldset>
+                  <input type="submit" value="Сохранить" class="popup__submit-profile-info">
+                </form>
+            </div>  
+        </div>
+        <div class="popup popup__image-wide popup_image-opened">
+            <div class="popup__image-container">
+              <button type="button" class="popup__close popup__close_image-wide"></button>
+              <img src="" alt="" class="popup__image">
+              <p class="popup__image-caption"></p>
+            </div>
+        </div>
     </div> 
-    <script src="scripts/script.js" defer></script>
     <template id="element-template">
-        <div class="element"> 
+        <li class="element"> 
             <img src="" alt="" class="element__image">
+            <button type="button" class="element__delete-button"></button>
             <div class="element__info">
                 <h2 class="element__title"></h2>
                 <button type="button" class="element__like-button"></button>
             </div>
-        </div>
+        </li>
     </template>
+    <script src="scripts/script.js" defer></script>
 </body>
 </html>

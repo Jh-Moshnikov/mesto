@@ -9,7 +9,7 @@
     background-position: center;
     position: absolute;
     top: -40px;
-    left: 438px;
+    right: -38px;
 }
 .popup__close:hover {
     opacity: 0.6;
@@ -20,7 +20,7 @@
       width: 20px;
       height: 20px;
       top: -36px;
-      left: 262px;
+      right: -1px;
       background-image: url(../../../images/popup_Close-320.png);
     }
   } 
