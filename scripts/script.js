@@ -67,14 +67,15 @@ popupCloseImageWide.addEventListener('click', function() {
 });
 
 // Обработчик «отправки» формы
- function formSubmitHandler (evt) {
+ function submitEditedProfile (evt) {
     evt.preventDefault(); // Эта строчка отменяет стандартную отправку формы                                
     profileName.textContent = nameInput.value;
     profileOccupation.textContent = jobInput.value;
     closePopup(popupProfile);
 }
 // добавление новой карточки пользователем на страницу
-const formSubmitCard = (evt) => {
+// formSubmitCard
+const submitNewCard = (evt) => {
  evt.preventDefault(); // Эта строчка отменяет стандартную отправку формы  
  const newCard = {title: cardName.value, link: cardLink.value};
  elementsContainer.prepend(generateElement(newCard));
@@ -83,9 +84,9 @@ const formSubmitCard = (evt) => {
 }
 
 // Прикрепляем обработчик к форме: он будет следить за событием “submit” - «отправка» для редактирования профиля 
-formEditProfile.addEventListener('submit', formSubmitHandler); 
+formEditProfile.addEventListener('submit', submitEditedProfile); 
 // и для добавления новой карточки
-formCardSubmit.addEventListener('submit', formSubmitCard);
+formCardSubmit.addEventListener('submit', submitNewCard);
 
 // возможность ставить лайк
 const handleLikeCard = (event) => {
@@ -112,9 +113,9 @@ const generateElement = (dataElement) => {
     deleteButton.addEventListener('click', handleDeleteCard);
     // присваиваю  значения из карточки при клике (вешаю слушатель)
     image.addEventListener('click', () => {
-       popupImage.src = image.src;
-       popupImage.alt = title.textContent;
-       popupImageCaption.textContent = title.textContent;
+       popupImage.src = dataElement.link;
+       popupImage.alt = dataElement.title;
+       popupImageCaption.textContent = dataElement.title;
        openPopup(popupImageOpened);
     });
     return newElement;
