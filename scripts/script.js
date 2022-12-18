@@ -33,15 +33,36 @@ function saveValues() {
   nameInput.value = profileName.textContent;
   jobInput.value = profileOccupation.textContent;
 };
+
+//закрытие попапа кнопкой esc
+const handleKeyEscape = (evt) => {
+  if(evt.key === 'Escape') {
+    closePopup(document.querySelector('.popup_opened'));
+  }
+};
+
+//закрытие попапа клиеом на оверлэй
+function closePoppupClickOverlay(evt) {
+  if(!evt.target.closest(".popup__container")) {
+    closePopup(evt.target.closest(".popup"));
+  }
+  };
+
 // объединненная функция открытия попапов
 function openPopup(arg) {
-arg.classList.add('popup_opened');
+  arg.classList.add('popup_opened');
+  document.addEventListener('keydown', handleKeyEscape);
+  arg.addEventListener('mousedown', closePoppupClickOverlay);
 };
 
 //единая функция закрытия попапов
 function closePopup(arg) {
   arg.classList.remove('popup_opened');
+  document.removeEventListener('keydown', handleKeyEscape);
 };
+
+
+
 
 // вешаем слушатели на кнопки(редактировать профиль, добавить фото)
 editButton.addEventListener('click', function() {
