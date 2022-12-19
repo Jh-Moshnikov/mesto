@@ -23,7 +23,7 @@ const isValid = (popupForm, popupInput, config) => {
 };
 
 const toggleButtonState = (inputList, popupSubmit, config) => {
-    if(hasInvalidInput(inputList)) {
+    if(hasInvalidInput(inputList) ) {
         popupSubmit.classList.add(config.inactiveButtonClass);
         popupSubmit.disabled = 'disabled';
     } else {
@@ -31,6 +31,8 @@ const toggleButtonState = (inputList, popupSubmit, config) => {
         popupSubmit.disabled = '';  
     }
 }; 
+
+
 
 const hasInvalidInput = (inputList) => {
     return inputList.some((popupInput) => {
@@ -42,6 +44,12 @@ const setEventListeners = (popupForm, config) => {
     const inputList = Array.from(popupForm.querySelectorAll(config.inputSelector));
     const popupSubmit = popupForm.querySelector(config.submitButtonSelector);
     toggleButtonState(inputList, popupSubmit, config);
+
+    popupForm.addEventListener('reset', () => {
+        setTimeout(() => {
+            toggleButtonState(inputList, popupSubmit, config);
+        }, 0)
+    });
 
     inputList.forEach((popupInput) => {
          popupInput.addEventListener('input', () => {

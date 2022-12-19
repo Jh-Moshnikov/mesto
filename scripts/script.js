@@ -1,4 +1,5 @@
-  // находим кнопки редактирования 
+
+// находим кнопки редактирования 
 const editButton = document.querySelector(".profile__edit-button");
 const addButton = document.querySelector('.profile__add-button');
 
@@ -43,7 +44,7 @@ const handleKeyEscape = (evt) => {
 
 //закрытие попапа клиеом на оверлэй
 function closePoppupClickOverlay(evt) {
-  if(!evt.target.closest(".popup__container")) {
+  if(!evt.target.closest(".popup_close-by-overlay")) { //popup__container
     closePopup(evt.target.closest(".popup"));
   }
   };
@@ -59,9 +60,8 @@ function openPopup(arg) {
 function closePopup(arg) {
   arg.classList.remove('popup_opened');
   document.removeEventListener('keydown', handleKeyEscape);
+  arg.removeEventListener('mousedown', closePoppupClickOverlay);
 };
-
-
 
 
 // вешаем слушатели на кнопки(редактировать профиль, добавить фото)
@@ -72,6 +72,7 @@ editButton.addEventListener('click', function() {
 
 addButton.addEventListener('click', function() {
   openPopup(popupSubmitCard);
+  toggleButtonState;
 });
 
 //вешаем слушателя на кнопки закрытия попапов(редактирования профиля, добавления фото, увелечения фото)
@@ -102,6 +103,7 @@ const submitNewCard = (evt) => {
  elementsContainer.prepend(generateElement(newCard));
  closePopup(popupSubmitCard);
  formCardSubmit.reset();
+ 
 }
 
 // Прикрепляем обработчик к форме: он будет следить за событием “submit” - «отправка» для редактирования профиля 
@@ -152,4 +154,3 @@ const generateElement = (dataElement) => {
     initialElements.forEach((dataElement) => {
     renderElement(dataElement);
     });
-

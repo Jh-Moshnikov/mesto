@@ -27,7 +27,7 @@
         </main>
         <footer class="footer"><p class="footer__information">© 2020 Mesto Russia</p></footer>
         <div class="popup popup_profile">
-            <div class="popup__container">
+            <div class="popup__container popup_close-by-overlay">
                 <button type="button" class="popup__close popup__close_edit-profile"></button>
                 <h2 class="popup__title">Редактировать профиль</h2>
                 <form method="post" name="profileForm" class="popup__form popup__form_edit-profile" novalidate>
@@ -42,7 +42,7 @@
             </div>  
         </div>
         <div class="popup popup_submitCard">
-            <div class="popup__container">
+            <div class="popup__container popup_close-by-overlay">
                 <button type="button" class="popup__close popup__close_submitCard"></button>
                 <h2 class="popup__title">Новое место</h2>
                 <form method="post" name="profileForm" class="popup__form popup__form_submitCard" novalidate>
@@ -57,7 +57,7 @@
             </div>  
         </div>
         <div class="popup popup_image-wide-opacity popup_image-opened">
-            <div class="popup__image-container">
+            <div class="popup__image-container popup_close-by-overlay">
               <button type="button" class="popup__close popup__close_image-wide"></button>
               <img src=" " alt="" class="popup__image">
               <p class="popup__image-caption"></p>

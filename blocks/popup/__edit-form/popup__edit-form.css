@@ -4,3 +4,9 @@
     padding: 0;
     margin: 0;
 }
+
+@media (max-width: 900px) {
+    .popup__edit-form {
+      width: 282px;
+    }
+  } 
