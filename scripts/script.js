@@ -44,7 +44,7 @@ const handleKeyEscape = (evt) => {
 
 //закрытие попапа клиеом на оверлэй
 function closePoppupClickOverlay(evt) {
-  if(!evt.target.closest(".popup_close-by-overlay")) { //popup__container
+  if(!evt.target.closest(".popup__close-by-overlay")) { 
     closePopup(evt.target.closest(".popup"));
   }
   };
