@@ -41,8 +41,8 @@ export default class FormValidator {
     }
 
     _toggleButtonState(inputList, popupSubmit)  {
-        console.log(inputList)
-        console.log(popupSubmit)
+        
+        
           if(this._hasInvalidInput(inputList)) {
             this._popupSubmit.classList.add(this._inactiveButtonClass);
             popupSubmit.disabled = 'disabled';
@@ -51,10 +51,16 @@ export default class FormValidator {
             popupSubmit.disabled = '';  
         }
     }
-
-   
-
-   
+// отдельный  метод для очистки ошибок и управления кнопкой
+   /* resetValidation() {
+        this._toggleButtonState();// <== управляем кнопкой ==
+  
+        this._inputList.forEach((popupInput) => {
+          this._hideInputError(popupInput)// <==очищаем ошибки ==
+        });
+  
+      }*/
+  
 
     _setEventListeners() {
         this._toggleButtonState(this._inputList, this._popupSubmit); //this &

@@ -1,6 +1,6 @@
 import Card from './Card.js';
 import { initialElements, config}  from './constants.js';
-import FormValidator from './validate.js';
+import FormValidator from './FormValidator.js';
 
 // находим кнопки редактирования 
 const editButton = document.querySelector(".profile__edit-button");
@@ -77,6 +77,7 @@ function openPopup(arg) {
   arg.classList.add('popup_opened');
   document.addEventListener('keydown', handleKeyEscape);
   arg.addEventListener('mousedown', closePoppupClickOverlay);
+  
 };
 
 //единая функция закрытия попапов
