@@ -1,4 +1,4 @@
-const initialElements = [
+  export  const initialElements = [
     {
       title: 'Алтай',
       link: 'images/Altai.png'
@@ -23,4 +23,15 @@ const initialElements = [
       title: 'Норвегия',
       link: 'images/Norway.png'
     }
-  ];
+  ]; 
+
+export const config = ({
+    formSelector: '.popup__form',
+    inputSelector: '.popup__edit',
+    submitButtonSelector: '.popup__submit-profile-info',
+    inactiveButtonClass: 'popup__submit-profile-info_disabled',
+    inputErrorClass: 'popup__edit_type_error',
+    errorClass: 'popup__edit-error_type_active'
+  });
+
+  

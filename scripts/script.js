@@ -1,3 +1,6 @@
+import Card from './Card.js';
+import { initialElements, config}  from './constants.js';
+import FormValidator from './validate.js';
 
 // находим кнопки редактирования 
 const editButton = document.querySelector(".profile__edit-button");
@@ -17,6 +20,7 @@ const profileOccupation = document.querySelector(".profile__occupation");
 // Находим форму в DOM
 const formEditProfile = popupProfile.querySelector('.popup__form_edit-profile'); 
 const formCardSubmit = document.querySelector('.popup__form_submitCard');
+
 // Находим поля форм в DOM
 const nameInput = document.querySelector('.popup__edit_change_name');
 const jobInput = document.querySelector('.popup__edit_change_occupation'); 
@@ -27,8 +31,27 @@ const popupImage = document.querySelector('.popup__image');
 const popupImageCaption = document.querySelector('.popup__image-caption');
 
 const elementsContainer = document.querySelector('.elements');
-const elementTemplate = document.querySelector('#element-template').content.querySelector('.element');
 
+
+//рендер карточки
+const renderElement = (item) => {
+  const card = new Card(item, '.element-template', handleCardClick);
+  const newCard = card.generateCard();
+  return newCard;
+}
+ 
+//перебираем массив
+initialElements.forEach((item) => {
+  elementsContainer.prepend(renderElement(item));
+});
+
+ function handleCardClick(link, title) {
+  popupImage.src = link;
+  popupImage.alt = title;
+  popupImageCaption.textContent = title;
+  openPopup(popupImageOpened);
+ }
+ 
 // присваиваем значения инпутов в окне редактирования профиля
 function saveValues() {
   nameInput.value = profileName.textContent;
@@ -72,7 +95,6 @@ editButton.addEventListener('click', function() {
 
 addButton.addEventListener('click', function() {
   openPopup(popupSubmitCard);
-  toggleButtonState;
 });
 
 //вешаем слушателя на кнопки закрытия попапов(редактирования профиля, добавления фото, увелечения фото)
@@ -100,7 +122,7 @@ popupCloseImageWide.addEventListener('click', function() {
 const submitNewCard = (evt) => {
  evt.preventDefault(); // Эта строчка отменяет стандартную отправку формы  
  const newCard = {title: cardName.value, link: cardLink.value};
- elementsContainer.prepend(generateElement(newCard));
+ elementsContainer.prepend(renderElement(newCard));
  closePopup(popupSubmitCard);
  formCardSubmit.reset();
  
@@ -111,46 +133,14 @@ formEditProfile.addEventListener('submit', submitEditedProfile);
 // и для добавления новой карточки
 formCardSubmit.addEventListener('submit', submitNewCard);
 
-// возможность ставить лайк
-const handleLikeCard = (event) => {
-  event.target.classList.toggle('element__like-button_active'); 
-  };
-
-// удаление карточки
-const handleDeleteCard = (event) => {
-  event.target.closest('.element').remove();
-};
+const validProfileInfo = new FormValidator(config, popupProfile);
+validProfileInfo.enableValidation();
 
 
-// генерация карточек
-const generateElement = (dataElement) => {
-    const newElement = elementTemplate.cloneNode(true);
-    const title = newElement.querySelector('.element__title');
-    const image = newElement.querySelector('.element__image');
-    title.textContent = dataElement.title;
-    image.src = dataElement.link;
-    image.alt = dataElement.title;
-    const likeButton = newElement.querySelector('.element__like-button');
-    likeButton.addEventListener('click', handleLikeCard);
-    const deleteButton = newElement.querySelector('.element__delete-button');
-    deleteButton.addEventListener('click', handleDeleteCard);
-    // присваиваю  значения из карточки при клике (вешаю слушатель)
-    image.addEventListener('click', () => {
-       popupImage.src = dataElement.link;
-       popupImage.alt = dataElement.title;
-       popupImageCaption.textContent = dataElement.title;
-       openPopup(popupImageOpened);
-    });
-    return newElement;
-    };
+const validSubmitCard = new FormValidator(config, popupSubmitCard);
+ validSubmitCard.enableValidation();
 
 
-// добавление карточки  
-    const renderElement =(dataElement) => {
-      elementsContainer.prepend(generateElement(dataElement));
-    };
-    
-// перебираем массив 
-    initialElements.forEach((dataElement) => {
-    renderElement(dataElement);
-    });
+
+
+ 
