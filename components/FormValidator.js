@@ -52,14 +52,14 @@ export default class FormValidator {
         }
     }
 // отдельный  метод для очистки ошибок и управления кнопкой
-   /* resetValidation() {
-        this._toggleButtonState();// <== управляем кнопкой ==
+    resetValidation() {
+       // this._toggleButtonState();// <== управляем кнопкой ==
   
         this._inputList.forEach((popupInput) => {
           this._hideInputError(popupInput)// <==очищаем ошибки ==
         });
   
-      }*/
+      }
   
 
     _setEventListeners() {
