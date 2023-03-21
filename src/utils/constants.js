@@ -1,7 +1,7 @@
  export  const initialElements = [
     {
       title: 'Алтай',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
     },
     {
       title: 'Архангельск',
@@ -21,7 +21,7 @@
     },
     {
       title: 'Норвегия',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
     }
   ]; 
 

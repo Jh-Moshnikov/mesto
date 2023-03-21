@@ -1,4 +1,4 @@
- import '../pages/index.css';
+ import './index.css';
  import Card from '../components/Card.js';
  import { initialElements, config}  from '../utils/constants.js';
  import FormValidator from '../components/FormValidator.js';
@@ -99,7 +99,7 @@ const popupWithImage = new PopupWithImage('.popup_image-wide-opacity');
  
  // Обработчик «отправки» формы
   function submitEditedProfile (evt) {
-     evt.preventDefault(); // Эта строчка отменяет стандартную отправку формы                                
+    // evt.preventDefault(); // Эта строчка отменяет стандартную отправку формы                                
      profileName.textContent = nameInput.value;
      profileOccupation.textContent = jobInput.value;
      popupWithProfile.close(popupProfile);
