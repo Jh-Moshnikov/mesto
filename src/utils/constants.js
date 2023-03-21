@@ -1,15 +1,15 @@
-  export  const initialElements = [
+ export  const initialElements = [
     {
       title: 'Алтай',
-      link: 'images/Altai.png'
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
     },
     {
       title: 'Архангельск',
-      link: 'images/Arkhangelsk.png'
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
     },
     {
       title: 'Канада',
-      link: 'images/Canada.png'
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
     },
     {
       title: 'Холмогоры',
@@ -17,13 +17,14 @@
     },
     {
       title: 'Италия',
-      link: 'images/Italy.png'
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
     },
     {
       title: 'Норвегия',
-      link: 'images/Norway.png'
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
     }
   ]; 
+
 
 export const config = ({
     formSelector: '.popup__form',
