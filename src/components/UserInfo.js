@@ -10,11 +10,13 @@ export default class UserInfo {
         profileOccupation: this._profileOccupation.textContent,
       }
       return userInfo;
+      
     }
-  
-    setUserInfo() {
-      this._profileName.textContent = profileName.textContent;
-      this._profileOccupation.textContent = profileOccupation.textContent;
+   
+    setUserInfo(data) {
+      this._profileName = data.Name;
+      this._profileOccupation = data.Occupation;
+
       
     }
   

@@ -40,7 +40,7 @@ const popupWithImage = new PopupWithImage('.popup_image-wide-opacity');
 
 
  const  popupWithSubmitCard = new  PopupWithForm({popupSelector: '.popup_submitCard', submitEditedProfile: (item) => {
-  cardList.addItem(submitNewCard(item));
+  submitNewCard(item);
  }});
  popupWithSubmitCard.setEventListeners();
  addButton.addEventListener('click', function() {
@@ -49,8 +49,8 @@ const popupWithImage = new PopupWithImage('.popup_image-wide-opacity');
 
  const user = new UserInfo({profileNameSelector: 'profileName', profileOccupationSelector: 'profileOccupation'});
 
- const popupWithProfile = new  PopupWithForm({popupSelector: '.popup_profile', submitEditedProfile: (userInfo) => {
-  user.setUserInfo({userInfo})
+ const popupWithProfile = new  PopupWithForm({popupSelector: '.popup_profile', submitEditedProfile: (data) => {
+  user.setUserInfo({data})
    popupWithProfile.close()
  }})
  popupWithProfile.setEventListeners();
@@ -61,8 +61,7 @@ const popupWithImage = new PopupWithImage('.popup_image-wide-opacity');
 
  // добавление новой карточки пользователем на страницу
  // formSubmitCard
- const submitNewCard = (evt) => { 
-  evt.preventDefault(); // Эта строчка отменяет стандартную отправку формы 
+ const submitNewCard = () => { 
   const newCard = {title: cardName.value, link: cardLink.value};
   elementsContainer.prepend(renderer(newCard));
   popupWithSubmitCard.close(popupSubmitCard);
@@ -98,7 +97,7 @@ const popupWithImage = new PopupWithImage('.popup_image-wide-opacity');
  
  
  // Обработчик «отправки» формы
-  function submitEditedProfile (evt) {
+  function submitEditedProfile () {
     // evt.preventDefault(); // Эта строчка отменяет стандартную отправку формы                                
      profileName.textContent = nameInput.value;
      profileOccupation.textContent = jobInput.value;
@@ -109,7 +108,7 @@ const popupWithImage = new PopupWithImage('.popup_image-wide-opacity');
  // Прикрепляем обработчик к форме: он будет следить за событием “submit” - «отправка» для редактирования профиля 
  formEditProfile.addEventListener('submit', submitEditedProfile); 
  // и для добавления новой карточки
- formCardSubmit.addEventListener('submit', submitNewCard);
+ //formCardSubmit.addEventListener('submit', submitNewCard);
  
  const validProfileInfo = new FormValidator(config, popupProfile);
  validProfileInfo.enableValidation();
