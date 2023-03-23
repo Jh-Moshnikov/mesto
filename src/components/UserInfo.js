@@ -14,10 +14,8 @@ export default class UserInfo {
     }
    
     setUserInfo(data) {
-      this._profileName = data.Name;
-      this._profileOccupation = data.Occupation;
-
-      
+      this._profileName.textContent = data[0]; // соответственно вставляю как элементы массива
+      this._profileOccupation.textContent = data[1];
     }
   
   }
