@@ -22,10 +22,7 @@ export default class Card {
       this._element.querySelector('.element__image').alt = this._title;
       this._element.querySelector('.element__title').textContent = this._title;
       this._element.querySelector('.element__image').src = this._link;
-     // this._element.querySelector('.element__image').alt = this._title;
-     // this._element.querySelector('.element__title').textContent = this._title;
-       
-  
+     
       this._setEventListeners();
   
       return this._element;
@@ -52,7 +49,6 @@ export default class Card {
   
     _handleDeleteCard () {
       this._element.remove();
-     // this._newCard.remove();
      this._element = null;
     }
   
