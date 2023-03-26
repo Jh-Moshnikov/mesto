@@ -14,7 +14,7 @@
 .profile__add-button{align-self:center;background:#000;background-image:url(ce2d549f963d55109035.png);background-position:50%;background-repeat:no-repeat;border:2px solid #fff;border-radius:2px;box-sizing:border-box;height:50px;margin-left:auto;width:150px}.profile__add-button:hover{cursor:pointer;opacity:.6}@media (max-width:900px){.profile__add-button{margin-left:0;width:282px}}
 .elements{display:grid;gap:20px 17px;grid-template-columns:repeat(3,282px);grid-template-rows:repeat(2,362px);list-style:none;margin-top:51px;padding:0;width:100%}@media (max-width:900px){.elements{gap:20px 16px;grid-template-columns:repeat(2,282px);grid-template-rows:repeat(3,362px);margin:51px auto 0;max-width:581px}}@media (max-width:600px){.elements{gap:20px;grid-template-columns:repeat(1,282px);grid-template-rows:repeat(6,362px);margin:36px auto 0;max-width:282px}}
 .element{background:#fff;border-radius:10px}
-.element__image{border-radius:10px 10px 0 0;height:282px;margin:0;-o-object-fit:cover;object-fit:cover;width:100%}.element__image:hover{cursor:pointer}
+.element__image{border-radius:10px 10px 0 0;display:block;height:282px;margin:0;-o-object-fit:cover;object-fit:cover;width:100%}.element__image:hover{cursor:pointer}
 .element__delete-button{background-color:transparent;background-image:url(ce3b64935accf9b8212e.svg);border:none;bottom:262px;height:19px;padding:0;position:relative;right:-245px;width:18px}.element__delete-button:hover{cursor:pointer;opacity:.5}
 .element__info{display:flex;justify-content:space-between;margin:20px 15px 12px 21px}
 .element__title{color:#000;font-size:24px;font-style:normal;font-weight:900;line-height:29px;margin:0;max-width:190px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
