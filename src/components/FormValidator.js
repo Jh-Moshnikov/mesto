@@ -1,12 +1,12 @@
 export default class FormValidator {
     constructor(config, popupEditForm) {
-        this._formSelector = config.formSelector;
+      //  this._formSelector = config.formSelector;
+        this._popupEditForm = popupEditForm;
         this._inputSelector = config.inputSelector;
         this._submitButtonSelector = config.submitButtonSelector;
         this._inactiveButtonClass = config.inactiveButtonClass;
         this._inputErrorClass = config.inputErrorClass;
-        this._errorClass = config.errorClass;
-        this._popupEditForm = popupEditForm;
+        this._errorClass = config.errorClass; 
         this._inputList = Array.from(popupEditForm.querySelectorAll(config.inputSelector));
         this._popupSubmit = this._popupEditForm.querySelector(this._submitButtonSelector);
        
@@ -14,6 +14,7 @@ export default class FormValidator {
 
     _showInputError(popupInput) {
         const popupError = document.querySelector(`.${popupInput.id}-error`);
+        console.log(`.${popupInput.id}-error`);
         popupInput.classList.add(this._inputErrorClass);
         popupError.textContent = popupInput.validationMessage;
         popupError.classList.add(this._errorClass);
@@ -40,20 +41,18 @@ export default class FormValidator {
         });
     }
 
-    _toggleButtonState(inputList, popupSubmit)  {
-        
-        
-          if(this._hasInvalidInput(inputList)) {
-            this._popupSubmit.classList.add(this._inactiveButtonClass);
-            popupSubmit.disabled = 'disabled';
+    _toggleButtonState()  {
+          if(this._hasInvalidInput()) {
+          this._popupSubmit.classList.add(this._inactiveButtonClass);
+             
         } else {
-            popupSubmit.classList.remove(this._inactiveButtonClass);
-            popupSubmit.disabled = '';  
+            this._popupSubmit.classList.remove(this._inactiveButtonClass);
+            this._popupSubmit.removeAttribute('disable', true); 
         }
     }
 // отдельный  метод для очистки ошибок и управления кнопкой
     resetValidation() {
-       // this._toggleButtonState();// <== управляем кнопкой ==
+        this._toggleButtonState(this._popupSubmit);// <== управляем кнопкой ==
   
         this._inputList.forEach((popupInput) => {
           this._hideInputError(popupInput)// <==очищаем ошибки ==
