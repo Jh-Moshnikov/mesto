@@ -13,14 +13,14 @@
 .profile__edit-button{background:#000;background-image:url(dfb3246e64167eda7df4.png);background-position:50%;background-repeat:no-repeat;border:1px solid #fff;box-sizing:border-box;height:24px;margin-left:18px;padding:0;width:24px}.profile__edit-button:hover{cursor:pointer;opacity:.6}@media (max-width:600px){.profile__edit-button{height:18px;margin-left:10px;margin-right:10px;width:18px}}
 .profile__add-button{align-self:center;background:#000;background-image:url(ce2d549f963d55109035.png);background-position:50%;background-repeat:no-repeat;border:2px solid #fff;border-radius:2px;box-sizing:border-box;height:50px;margin-left:auto;width:150px}.profile__add-button:hover{cursor:pointer;opacity:.6}@media (max-width:900px){.profile__add-button{margin-left:0;width:282px}}
 .elements{display:grid;gap:20px 17px;grid-template-columns:repeat(3,282px);grid-template-rows:repeat(2,362px);list-style:none;margin-top:51px;padding:0;width:100%}@media (max-width:900px){.elements{gap:20px 16px;grid-template-columns:repeat(2,282px);grid-template-rows:repeat(3,362px);margin:51px auto 0;max-width:581px}}@media (max-width:600px){.elements{gap:20px;grid-template-columns:repeat(1,282px);grid-template-rows:repeat(6,362px);margin:36px auto 0;max-width:282px}}
-.element{background:#fff;border-radius:10px}
-.element__image{border-radius:10px 10px 0 0;display:block;height:282px;margin:0;-o-object-fit:cover;object-fit:cover;width:100%}.element__image:hover{cursor:pointer}
-.element__delete-button{background-color:transparent;background-image:url(ce3b64935accf9b8212e.svg);border:none;bottom:262px;height:19px;padding:0;position:relative;right:-245px;width:18px}.element__delete-button:hover{cursor:pointer;opacity:.5}
-.element__info{display:flex;justify-content:space-between;margin:20px 15px 12px 21px}
-.element__title{color:#000;font-size:24px;font-style:normal;font-weight:900;line-height:29px;margin:0;max-width:190px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.element__like-container{align-items:center;display:flex;flex-direction:column;padding:0 3px 4px 0}
-.element__like-button{align-self:center;background-color:#fff;background-image:url(30215df8d76020f1941e.png);border:none;height:19px;width:22px}.element__like-button:hover{cursor:pointer;opacity:.5}
-.element__like-box{color:#000;font-size:13px;font-style:normal;font-weight:400;line-height:16px;margin:3px 0 0;padding:0;text-align:center;width:10px}
+.element{background-color:#fff;border-radius:10px;margin:0 auto;max-height:361px;overflow:hidden;position:relative;width:282px}
+.element__image{cursor:pointer;height:282px;-o-object-fit:cover;object-fit:cover;width:282px}.element__image:hover{cursor:pointer}
+.element__delete-button{background-color:transparent;background-image:url(ce3b64935accf9b8212e.svg);background-repeat:no-repeat;border:none;color:inherit;cursor:pointer;font:inherit;height:19px;padding:0;position:absolute;right:20px;top:20px;width:18px}.element__delete-button:hover{cursor:pointer;opacity:.5}
+.element__info{align-items:center;display:flex;justify-content:space-between;padding:21px 20px}
+.element__title{box-sizing:border-box;color:#000;font-size:24px;font-weight:900;line-height:29px;margin:0;max-width:calc(100% - 44px);overflow:hidden;padding:0;text-overflow:ellipsis;white-space:nowrap}
+.element__like-container{align-items:center;display:flex;flex-direction:column}
+.element__like-button{background-color:transparent;background-image:url(30215df8d76020f1941e.png);background-repeat:no-repeat;border:none;color:inherit;cursor:pointer;font:inherit;height:19px;padding:0;width:22px}.element__like-button:hover{cursor:pointer;opacity:.5}
+.element__like-box{color:#000;font-size:13px;font-weight:400;line-height:16px;margin:0}
 .element__like-button_active{background-image:url(b6f9254c1e07adfc969a.png)}
 .footer{color:#545454;font-size:18px;font-style:normal;font-weight:400;line-height:22px;margin-bottom:60px;margin-top:67px}@media (max-width:900px){.footer{margin-left:19px}}@media (max-width:600px){.footer{font-size:14px;line-height:17px;margin-bottom:36px;margin-top:48px}}
 .footer__information{margin:0;padding:0}
