@@ -102,9 +102,6 @@ delete() {
   this._element = null;
 }
 
-/*_handleLikeCard() {
-  this._likeButton.classList.toggle('element__like-button_active');
-}*/
 
   
    }

@@ -1,12 +1,16 @@
 .element__image {
-   display: block;
-    width: 100%;
+    width: 282px;
     height: 282px;
-    border-radius: 10px 10px 0 0;
-    margin: 0;
     object-fit: cover;
-    
-}
+    cursor: pointer;
+     
+ }
+
 .element__image:hover {
     cursor: pointer;
 }
+
+
+
+
+

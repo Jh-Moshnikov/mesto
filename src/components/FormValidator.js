@@ -14,7 +14,6 @@ export default class FormValidator {
 
     _showInputError(popupInput) {
         const popupError = document.querySelector(`.${popupInput.id}-error`);
-        console.log(`.${popupInput.id}-error`);
         popupInput.classList.add(this._inputErrorClass);
         popupError.textContent = popupInput.validationMessage;
         popupError.classList.add(this._errorClass);

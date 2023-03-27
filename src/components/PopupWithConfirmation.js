@@ -3,7 +3,7 @@ export default class PopupWithConfirmation extends Popup {
     constructor(popupSelector, handleSubmit) {
         super(popupSelector);
         this._handleSubmit = handleSubmit;
-        this._form = this._popup.querySelector('.popup__form'); /*('.popup__form')*/
+        this._form = this._popup.querySelector('.popup__form'); 
     }
 
     open(card) {

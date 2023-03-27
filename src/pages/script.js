@@ -85,7 +85,7 @@ async function  submitEditedProfile(data)  {
       const res = await api.addNewCard(data);
       const card = createCard(res);
       cardList.addItem(card); //addItem
-      popupWithSubmitCard.close();
+       popupWithSubmitCard.close();
   } catch (err) {
       console.warn(err)
   } finally {
